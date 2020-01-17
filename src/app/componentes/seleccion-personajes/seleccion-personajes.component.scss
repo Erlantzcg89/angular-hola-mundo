@@ -1,0 +1,17 @@
+.seleccion-main {
+    padding: 50px 50px 50px;
+  }
+  
+.seleccion-section, .seleccion-section-arena {
+    border: 5px solid rgb(0, 123, 255);
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+.seleccion-section-arena{
+    border: 5px solid red;
+}
+
+.seleccion-section-arena a{
+    color: red;
+}

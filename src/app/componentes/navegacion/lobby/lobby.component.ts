@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LobbyComponent implements OnInit {
 
-  titulo = 'salir';
+  salir = 'salir';
+  saludo = 'Bienvenido';
+  juego = 'juego peleas';
 
   constructor() { }
 

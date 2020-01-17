@@ -16,6 +16,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  titulo = 'Hola Mundo';
+  tituloNav = 'Hola Mundo';
+  tituloFooter = '&copy; Erlantz Caballero 2020';
 
 }

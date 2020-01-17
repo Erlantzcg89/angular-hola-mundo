@@ -2,12 +2,6 @@
 
   <section class="login-section">
 
-    <h2 class="text-center"><a routerLink="/lobby">{{titulo | uppercase}}</a></h2>
-
-  </section>
-
-  <section class="login-section">
-
     <p>{{productos.nombre | uppercase}}:</p>
 
     <div *ngIf="pSeleccionado !== ''">
@@ -31,7 +25,11 @@
       </li>
     </ul>
 
+  </section>
 
+  <section class="login-section">
+
+    <h2 class="text-center"><a routerLink="/lobby">{{titulo | uppercase}}</a></h2>
 
   </section>
 

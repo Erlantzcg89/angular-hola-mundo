@@ -1,0 +1,46 @@
+<main class="seleccion-main">
+
+    <section class="seleccion-section">
+
+        <div *ngIf="pjSeleccionado == ''">
+
+            <p>Selecciona tu Gladiador:</p>
+
+        </div>
+
+        <div *ngIf="pjSeleccionado !== ''">
+
+            <div class="pl-4 pb-2"><i class="login-icon {{pjSeleccionado.icono}}"></i></div>
+            <ul>
+                <li>Raza: {{pjSeleccionado.raza.nombre | titlecase}}</li>
+                <li>Clase: {{pjSeleccionado.clase.nombre | titlecase}}</li>
+            </ul>
+
+        </div>
+
+        <ul class="login-lista list-group">
+            <li *ngFor="let p of personajes.lista" (click)="seleccionarPersonaje(p)"
+                class="list-group-item {{ (p.id==pjSeleccionado.id) ? 'active' : '' }}">
+                {{p.id}} | {{p.nombre}}
+            </li>
+        </ul>
+
+    </section>
+
+    <div *ngIf="pjSeleccionado !== ''">
+
+        <section class="seleccion-section-arena">
+
+            <h3 class="text-center"><a routerLink="/arena">{{arena | uppercase}}</a></h3>
+
+        </section>
+
+    </div>
+
+    <section class="seleccion-section">
+
+        <h2 class="text-center"><a routerLink="/inicio">{{salir | uppercase}}</a></h2>
+
+    </section>
+
+</main>

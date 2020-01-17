@@ -1,13 +1,20 @@
-<main class="login-main">
+<main class="lobby-main">
 
-  <section class="login-section">
+  <section class="lobby-section">
 
-    <h2 class="text-center"><a routerLink="/inicio">{{titulo | uppercase}}</a></h2>
+    <h2 class="text-center">{{saludo}}</h2>
 
   </section>
 
-  <section class="login-section">
-    <h2 class="text-center">Bienvenido</h2>
+  <section class="lobby-section">
+
+    <h2 class="text-center"><a routerLink="/seleccion-de-personaje">{{juego | uppercase}}</a></h2>
+
+  </section>
+
+  <section class="lobby-section">
+
+    <h2 class="text-center"><a routerLink="/inicio">{{salir | uppercase}}</a></h2>
 
   </section>
 

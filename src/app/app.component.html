@@ -1,7 +1,13 @@
-<nav class="login-navbar navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="app-navbar navbar navbar-expand-lg">
 
-  <h1 class="m-auto text-white">{{titulo}}</h1>
+  <h1 class="m-auto text-white">{{tituloNav}}</h1>
 
 </nav>
 
 <router-outlet></router-outlet>
+
+<nav class="app-navbar navbar navbar-expand-lg">
+
+  <p class="m-auto text-white" [innerHTML]="tituloFooter"></p>
+
+</nav>
