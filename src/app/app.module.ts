@@ -7,6 +7,7 @@ import { LoginComponent } from './componentes/navegacion/login/login.component';
 import { LobbyComponent } from './componentes/navegacion/lobby/lobby.component';
 import { SeleccionPersonajesComponent } from './componentes/seleccion-personajes/seleccion-personajes.component';
 import { ArenaComponent } from './componentes/arena/arena.component';
+import { TourOfHeroesComponent } from './tour-of-heroes/tour-of-heroes.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ArenaComponent } from './componentes/arena/arena.component';
     LobbyComponent,
     SeleccionPersonajesComponent,
     ArenaComponent,
+    TourOfHeroesComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  titulo = 'login';
   productos = {
     "nombre": "productos",
     "lista": [
