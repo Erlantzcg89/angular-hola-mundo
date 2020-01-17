@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PruebaComponent } from './componentes/prueba/prueba.component';
-import { BotonComponent } from './componentes/boton/boton.component';
+import { LoginComponent } from './componentes/navegacion/login/login.component';
+import { LobbyComponent } from './componentes/navegacion/lobby/lobby.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PruebaComponent,
-    BotonComponent
+    LoginComponent,
+    LobbyComponent,
   ],
   imports: [
     BrowserModule,
