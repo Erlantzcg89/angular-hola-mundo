@@ -1,0 +1,34 @@
+<main class="arrays-main">
+
+  <section class="arrays-section">
+
+    <h2>jugando con arrays</h2>
+
+    <div class="row">
+      <div class="col">
+        <pre>
+
+            {{frutas | json}}
+    
+        </pre>
+      </div>
+      <div class="col">
+        Precio total: {{total}}<br>
+        Solo nombres frutas:
+      </div>
+    </div>
+
+  </section>
+
+  <section class="arrays-section">
+
+    <h2>{{pokemon.name}}</h2>
+
+    <img [src]="pokemon.sprites.front_default" alt="{{pokemon.name}}">
+    <hr>
+
+    {{ pokemon | json }}
+
+  </section>
+
+</main>

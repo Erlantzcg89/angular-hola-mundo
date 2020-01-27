@@ -8,7 +8,10 @@ import { LoginComponent } from './componentes/navegacion/login/login.component';
 import { LobbyComponent } from './componentes/navegacion/lobby/lobby.component';
 import { SeleccionPersonajesComponent } from './componentes/seleccion-personajes/seleccion-personajes.component';
 import { ArenaComponent } from './componentes/arena/arena.component';
-import { TourOfHeroesComponent } from './tour-of-heroes/tour-of-heroes.component';
+import { TourOfHeroesComponent } from './paginas/tour-of-heroes/tour-of-heroes.component';
+import { InicioComponent } from './paginas/inicio/inicio.component';
+import { ArraysComponent } from './paginas/arrays/arrays.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 
 
 @NgModule({
@@ -19,6 +22,9 @@ import { TourOfHeroesComponent } from './tour-of-heroes/tour-of-heroes.component
     SeleccionPersonajesComponent,
     ArenaComponent,
     TourOfHeroesComponent,
+    InicioComponent,
+    ArraysComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
