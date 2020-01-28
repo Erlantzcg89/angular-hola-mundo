@@ -13,8 +13,22 @@
         </pre>
       </div>
       <div class="col">
-        Precio total: {{total}}<br>
-        Solo nombres frutas:
+        Precio total: {{total}}&euro;<br>
+        Nombres de las frutas:
+        <ul>
+          <li *ngFor="let f of nombresFrutas">{{f | titlecase}}</li>
+        </ul>
+        Total con descuento: {{totalDescuento}}&euro;<br>
+        Nombre frutas amarillas:
+        <ul>
+          <li *ngFor="let f of frutasAmarillas">{{f.nombre | titlecase}}</li>
+        </ul>
+        Precio total frutas amarillas: {{totalAmarillas}}&euro;<br>
+        Buscar 1º fruta verde: {{frutasVerdes[0].nombre | titlecase}}<br>
+        Array de todos los colores:
+        <ul>
+          <li *ngFor="let c of colores">{{c}}</li>
+        </ul>
       </div>
     </div>
 
