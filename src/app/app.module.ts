@@ -12,6 +12,7 @@ import { TourOfHeroesComponent } from './paginas/tour-of-heroes/tour-of-heroes.c
 import { InicioComponent } from './paginas/inicio/inicio.component';
 import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
     InicioComponent,
     ArraysComponent,
     NavbarComponent,
+    PokemonRestComponent,
   ],
   imports: [
     BrowserModule,

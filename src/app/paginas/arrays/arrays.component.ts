@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-arrays',
@@ -21,10 +20,9 @@ export class ArraysComponent implements OnInit {
   frutasVerdes: any;
   colores: any;
 
-  constructor(private pokemonService: PokemonService) {
+  constructor() {
 
     console.trace('Arrays component constructor');
-    this.pokemon = {};
 
     // arrays
     this.total = 0;
@@ -39,17 +37,6 @@ export class ArraysComponent implements OnInit {
 
   ngOnInit() {
     console.trace('InicioComponent ngOnInit');
-
-    this.pokemonService.getPokemon().subscribe(
-      data => {
-        console.debug('petición ok %o', data);
-        this.pokemon = data;
-      },
-      error => console.warn(error),
-      () => {
-        console.trace('petición completa');
-      }
-    );
 
     // operaciones con arrays
     this.nombresFrutas = [];

@@ -1,6 +1,54 @@
 {
-  "colores": [
+  "juego": {
+    "combates": [{
+      "id": 1,
+      "id_zona": 1,
+      "id_personajes": [1, 2],
+      "id_criaturas": [1]
+    }]
+  },
+  "usuarios": [{
+      "id": 1,
+      "nombre": "Erlantz",
+      "id_personaje": 2
+    },
     {
+      "id": 2,
+      "nombre": "Jon",
+      "id_personaje": 1
+    }
+  ],
+  "personajes": [{
+      "id": 1,
+      "nombre": "elfo",
+      "vida": 9,
+      "danyo_dado": 6,
+      "danyo_dado_n": 1,
+      "danyo_bonus": 2
+    },
+    {
+      "id": 2,
+      "nombre": "lur",
+      "vida": 11,
+      "ataque_dado": 4,
+      "ataque_dado_n": 1,
+      "danyo_bonus": 0
+
+    }
+  ],
+  "criaturas": [{
+    "id": 1,
+    "nombre": "trasgo",
+    "vida": 4,
+    "ataque_dado": 4,
+    "ataque_dado_n": 1,
+    "danyo_bonus": 0
+  }],
+  "zonas": [{
+    "id": 1,
+    "nombre": "bosque viejo"
+  }],
+  "colores": [{
       "id": 1,
       "nombre": "negro",
       "hex": "#000"
@@ -41,20 +89,16 @@
       "id": 8
     }
   ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "posts": [{
+    "id": 1,
+    "title": "json-server",
+    "author": "typicode"
+  }],
+  "comments": [{
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }],
   "profile": {
     "name": "typicode"
   }

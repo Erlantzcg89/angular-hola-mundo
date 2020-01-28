@@ -1,0 +1,32 @@
+<main class="pokemon-main">
+
+  <section class="pokemon-section">
+
+    <input type="text" value="nombre del pokemon ..." [(ngModel)]="buscarId">
+    <button (click)="buscarRellenar(buscarId)">Buscar</button>
+
+  </section>
+
+  <section class="pokemon-section">
+
+    <h2>{{pokemon.nombre | titlecase}}</h2>
+    <p>Id pokedex: {{pokemon.id}}</p>
+    <p>
+      <img src="{{pokemon.imagen}}" alt="{{pokemon.nombre}}" class="pokemon-imagen">
+      <img src="{{pokemon.imagen2}}" alt="{{pokemon.nombre}}" class="pokemon-imagen">
+    </p>
+
+  </section>
+
+  <section class="pokemon-section">
+
+    <h2>{{pokemonPrueba.name | titlecase}}</h2>
+
+    <img src="{{pokemonPrueba.sprites.front_default}}" alt="{{pokemonPrueba.name}}" class="pokemon-imagen">
+    <hr>
+
+    {{ pokemonPrueba | json }}
+
+  </section>
+
+</main>
