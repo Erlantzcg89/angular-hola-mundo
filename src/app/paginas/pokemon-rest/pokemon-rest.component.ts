@@ -9,27 +9,24 @@ import { Pokemon } from 'src/app/model/pokemon';
 })
 export class PokemonRestComponent implements OnInit {
 
+  // declaraciones
   pokemonPrueba: any;
-
   pokemon: Pokemon;
-
   pokemons: Array<Pokemon>;
 
-  buscarId: string;
-
+  // constructor
   constructor(private pokemonService: PokemonService) {
 
+    // inicializaciones a 0
     this.pokemonPrueba = {};
-
     this.pokemon = new Pokemon('');
-
-    this.buscarId = '';
-
-
+    this.pokemons = [];
 
   }
 
+  // ngOnInit
   ngOnInit() {
+
     console.trace('InicioComponent ngOnInit');
 
     this.pokemonService.getByName('pikachu').subscribe(
@@ -57,26 +54,27 @@ export class PokemonRestComponent implements OnInit {
       }
     );
 
-    function buscarRellenar(nombre: string) {
-      this.pokemonService.getByName(nombre).subscribe(
-        data => {
-          console.debug('petición ok %o', data);
-          let p = new Pokemon('');
+  }// ngOnInit()
 
-          p.id = data.id
-          p.nombre = data.name
-          p.imagen = data.sprites.front_default;
-          p.imagen2 = data.sprites.back_default;
+  buscarRellenar(nombre: string) {
+    this.pokemonService.getByName(nombre).subscribe(
+      data => {
+        console.debug('petición ok %o', data);
+        let p = new Pokemon('');
 
-          this.pokemons.push(p);
+        p.id = data.id
+        p.nombre = data.name
+        p.imagen = data.sprites.front_default;
+        p.imagen2 = data.sprites.back_default;
 
-        },
-        error => console.warn(error),
-        () => {
-          console.trace('esto es el finally');
-        }
-      );
-    }
+        this.pokemons.unshift(p);
+
+      },
+      error => console.warn(error),
+      () => {
+        console.trace('esto es el finally');
+      }
+    );
   }
 
 }

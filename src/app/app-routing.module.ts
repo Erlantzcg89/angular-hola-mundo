@@ -7,6 +7,7 @@ import { ArenaComponent } from './componentes/arena/arena.component';
 import { TourOfHeroesComponent } from './paginas/tour-of-heroes/tour-of-heroes.component';
 import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
+import { ErlantzRestComponent } from './paginas/erlantz-rest/erlantz-rest.component';
 
 
 const appRoutes: Routes = [
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'inicio', component: LoginComponent },
   { path: 'arrays', component: ArraysComponent },
   { path: 'pokemon-rest', component: PokemonRestComponent },
+  { path: 'erlantz-rest', component: ErlantzRestComponent },
   { path: 'tour-of-heroes', component: TourOfHeroesComponent },
   { path: 'lobby', component: LobbyComponent },
   { path: 'seleccion-de-personaje', component: SeleccionPersonajesComponent },

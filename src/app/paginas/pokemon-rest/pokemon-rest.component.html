@@ -2,8 +2,21 @@
 
   <section class="pokemon-section">
 
-    <input type="text" value="nombre del pokemon ..." [(ngModel)]="buscarId">
-    <button (click)="buscarRellenar(buscarId)">Buscar</button>
+    <input type="text" [(ngModel)]="pokemonId">
+    <button (click)="buscarRellenar(pokemonId)">Buscar</button>
+
+  </section>
+
+  <section *ngIf="pokemons.length > 0" class="pokemon-section">
+
+    <div *ngFor="let p of pokemons">
+      <h2>{{p.nombre | titlecase}}</h2>
+      <p>Id pokedex: {{p.id}}</p>
+      <p>
+        <img src="{{p.imagen}}" alt="{{p.nombre}}" class="pokemon-imagen">
+        <img src="{{p.imagen2}}" alt="{{p.nombre}}" class="pokemon-imagen">
+      </p>
+    </div>
 
   </section>
 
@@ -22,7 +35,7 @@
 
     <h2>{{pokemonPrueba.name | titlecase}}</h2>
 
-    <img src="{{pokemonPrueba.sprites.front_default}}" alt="{{pokemonPrueba.name}}" class="pokemon-imagen">
+    <img src="{{pokemonPrueba?.sprites?.front_default}}" alt="{{pokemonPrueba.name}}" class="pokemon-imagen">
     <hr>
 
     {{ pokemonPrueba | json }}
