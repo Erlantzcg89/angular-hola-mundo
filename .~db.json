@@ -69,12 +69,6 @@
       "id_usuario": 1,
       "fecha": "28/01/2020",
       "mensaje": "prueba este es mi primer mensaje"
-    },
-    {
-      "id_usuario": 1,
-      "fecha": "28/01/2020",
-      "mensaje": "weeeee",
-      "id": 2
     }
   ]
 }

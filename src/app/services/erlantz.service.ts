@@ -13,18 +13,90 @@ export class ErlantzService {
 
   }
 
-  getByNameJuego(nombre: string): Observable<any> {
+  getJuego(): Observable<any> {
 
     // url
-    const url = `http://localhost:3000/juego/${nombre}/`;
+    const url = `http://localhost:3000/juego/`;
 
-    console.trace('PokemonService getPokemon' + url);
+    console.trace('ErlantzSercive getJuego' + url);
 
-    // GET de la url
+    // GET
     return this.http.get(url);
   }
 
-  // getAll()
+  getUsuarios(): Observable<any> {
 
-  // getById()
+    // url
+    const url = `http://localhost:3000/usuarios/`;
+
+    console.trace('PokemonService getUsuarios' + url);
+
+    // GET
+    return this.http.get(url);
+  }
+
+  getPersonajes(): Observable<any> {
+
+    // url
+    const url = `http://localhost:3000/personajes/`;
+
+    console.trace('PokemonService getPersonajes' + url);
+
+    // GET
+    return this.http.get(url);
+  }
+
+  getCriaturas(): Observable<any> {
+
+    // url
+    const url = `http://localhost:3000/criaturas/`;
+
+    console.trace('PokemonService getCriaturas' + url);
+
+    // GET
+    return this.http.get(url);
+  }
+
+  getZonas(): Observable<any> {
+
+    // url
+    const url = `http://localhost:3000/zonas/`;
+
+    console.trace('PokemonService getZonas' + url);
+
+    // GET
+    return this.http.get(url);
+  }
+
+  getChat(): Observable<any> {
+
+    // url
+    const url = `http://localhost:3000/chat/`;
+
+    console.trace('PokemonService getChat' + url);
+
+    // GET 
+    return this.http.get(url);
+  }
+
+  public addChat(id_usuario: number, fecha: string, mensaje: string): Observable<any> {
+
+    // url
+    const url = `http://localhost:3000/chat/`;
+
+    const toAdd = { id_usuario: id_usuario, fecha: fecha, mensaje: mensaje };
+
+    // POST
+    return this.http.post(url, toAdd);
+  }
+
+  public deleteChat(id: number): Observable<any> {
+
+    // url
+    const url = `http://localhost:3000/chat/`;
+
+    // DELETE
+    return this.http.delete(url + id);
+  }
+
 }

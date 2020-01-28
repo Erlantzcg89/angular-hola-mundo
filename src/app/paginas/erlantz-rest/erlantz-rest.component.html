@@ -1,1 +1,56 @@
-<p>erlantz-rest works!</p>
+<main class="erlantz-main">
+
+    <section class="erlantz-section">
+        <h2>Objeto juego formato json</h2>
+        <pre>
+            <p>{{juego | json}}</p>
+        </pre>
+    </section>
+
+    <section class="erlantz-section">
+        <h2>Array usuarios formato json</h2>
+        <pre>
+            <p>{{usuarios | json}}</p>
+        </pre>
+    </section>
+
+    <section class="erlantz-section">
+        <h2>Array personajes formato json</h2>
+        <pre>
+            <p>{{personajes | json}}</p>
+        </pre>
+    </section>
+
+    <section class="erlantz-section">
+        <h2>Array criaturas formato json</h2>
+        <pre>
+            <p>{{criaturas | json}}</p>
+        </pre>
+    </section>
+
+    <section class="erlantz-section">
+        <h2>Array zonas formato json</h2>
+        <pre>
+            <p>{{zonas | json}}</p>
+        </pre>
+    </section>
+
+    <section class="erlantz-section">
+
+        <div class="addChat">
+            <input type="text" [(ngModel)]="mensaje">
+            <button (click)="mensajeChat(mensaje)">Enviar</button>
+        </div>
+
+        <div class="deleteChat">
+            <input type="text" [(ngModel)]="chatId">
+            <button (click)="borrarChat(chatId)">Borrar</button>
+        </div>
+
+        <h2>Array chat formato json</h2>
+        <pre>
+            <p>{{chat | json}}</p>
+        </pre>
+    </section>
+
+</main>

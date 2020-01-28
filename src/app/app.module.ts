@@ -16,7 +16,6 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 import { ErlantzRestComponent } from './paginas/erlantz-rest/erlantz-rest.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
