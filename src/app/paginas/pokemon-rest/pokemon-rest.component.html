@@ -5,20 +5,37 @@
     <input type="text" [(ngModel)]="pokemonId">
     <button (click)="buscarRellenar(pokemonId)">Buscar</button>
 
+    <div *ngIf="mensajeAlert" class="alert alert-danger mt-4" role="alert">
+      {{mensajeAlert}}
+    </div>
+
   </section>
 
-  <section *ngIf="pokemons.length > 0" class="pokemon-section">
+  <div *ngIf="pokemons.length > 0">
 
-    <div *ngFor="let p of pokemons">
+    <section *ngFor="let p of pokemons" class="pokemon-section">
+
       <h2>{{p.nombre | titlecase}}</h2>
       <p>Id pokedex: {{p.id}}</p>
       <p>
         <img src="{{p.imagen}}" alt="{{p.nombre}}" class="pokemon-imagen">
         <img src="{{p.imagen2}}" alt="{{p.nombre}}" class="pokemon-imagen">
       </p>
-    </div>
+      <p>
+        <img src="{{p.imagen3}}" alt="{{p.nombre}}" class="pokemon-imagen">
+        <img src="{{p.imagen4}}" alt="{{p.nombre}}" class="pokemon-imagen">
+      </p>
+      <p>Habilidades</p>
+      <ul>
+        <li *ngFor="let a of p.abilitiesDetalle">
+          <h4>{{a.nombre | titlecase}}:</h4>
+          <p>{{a.descripcion}}</p>
+        </li>
+      </ul>
 
-  </section>
+    </section>
+
+  </div>
 
   <section class="pokemon-section">
 

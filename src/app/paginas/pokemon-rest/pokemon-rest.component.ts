@@ -13,6 +13,7 @@ export class PokemonRestComponent implements OnInit {
   pokemonPrueba: any;
   pokemon: Pokemon;
   pokemons: Array<Pokemon>;
+  mensajeAlert: String;
 
   // constructor
   constructor(private pokemonService: PokemonService) {
@@ -21,6 +22,7 @@ export class PokemonRestComponent implements OnInit {
     this.pokemonPrueba = {};
     this.pokemon = new Pokemon('');
     this.pokemons = [];
+    this.mensajeAlert = '';
 
   }
 
@@ -66,11 +68,39 @@ export class PokemonRestComponent implements OnInit {
         p.nombre = data.name
         p.imagen = data.sprites.front_default;
         p.imagen2 = data.sprites.back_default;
+        p.imagen3 = data.sprites.front_shiny;
+        p.imagen4 = data.sprites.back_shiny;
+        p.abilities = data.abilities;
 
         this.pokemons.unshift(p);
 
+        this.mensajeAlert = '';
+
+        // buscar su abilidad
+
+        p.abilities.forEach(element => {
+
+          console.debug(element);
+          this.pokemonService.getAbilidadByName(element.ability.name).subscribe(
+            data => {
+              console.debug(' encontrada habilidad %o', data);
+
+              let obj = {};
+              obj["nombre"] = data.names[4].name;
+              obj["descripcion"] = data.flavor_text_entries[4].flavor_text;
+
+              p.abilitiesDetalle.push(obj);
+
+            }
+          )
+
+        });
+
       },
-      error => console.warn(error),
+      error => {
+        console.warn(error);
+        this.mensajeAlert = `El pokemon ${nombre} no existe`;
+      },
       () => {
         console.trace('esto es el finally');
       }
