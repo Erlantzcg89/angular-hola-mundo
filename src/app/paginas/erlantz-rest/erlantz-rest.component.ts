@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ErlantzService } from 'src/app/services/erlantz.service';
 import { Observable } from 'rxjs';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-erlantz-rest',
@@ -18,6 +19,7 @@ export class ErlantzRestComponent implements OnInit {
   criaturas: [];
   zonas: [];
   chat: [];
+  contadorSegundos: any;
 
   // constructor
   constructor(private erlantzService: ErlantzService) {
@@ -29,6 +31,7 @@ export class ErlantzRestComponent implements OnInit {
     this.criaturas = [];
     this.zonas = [];
     this.chat = [];
+    const contadorSegundos = interval(500);
 
   }
 
@@ -36,6 +39,12 @@ export class ErlantzRestComponent implements OnInit {
   ngOnInit() {
 
     console.trace('InicioComponent ngOnInit');
+
+    this.contadorSegundos.subscribe((n) => {
+
+      console.log(`estoy suscrito al contador, n: ${n} segundos`)
+
+    });
 
     // this.chat$ = Observable
     //   .interval(1000)

@@ -1,0 +1,6 @@
+        metodos http service angular
+=======================================================
+
+    - https://offering.solutions/blog/articles/2016/02/01/consuming-a-rest-api-with-angular-http-service-in-typescript/
+
+=======================================================
