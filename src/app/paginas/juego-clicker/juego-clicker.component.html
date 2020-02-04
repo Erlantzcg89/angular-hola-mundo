@@ -1,0 +1,26 @@
+<main class="clicker-main">
+
+  <section class="clicker-section">
+
+    <div class="nombre-centrar">
+      <h2>Tu nombre:</h2>
+      <input type="text" [(ngModel)]="nombre" class="mr-2">
+      <button (click)="jugar(nombre)">JUGAR</button>
+    </div>
+
+  </section>
+
+  <div class="juego" [hidden]="!token">
+
+    <section class="clicker-section">
+
+
+      <h2 class="text-center">{{puntos}}</h2>
+      <button class="boton-gurdo" (click)="clickear()">CLICK</button>
+
+    </section>
+
+  </div>
+
+
+</main>

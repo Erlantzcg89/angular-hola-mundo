@@ -1,0 +1,48 @@
+//azul bordes rgb(0,123,255)
+
+.clicker-main {
+  padding: 50px 50px 50px;
+}
+
+.clicker-section {
+  border: 5px solid rgb(0, 123, 255);
+  padding: 30px;
+  margin-bottom: 10px;
+
+  .nombre-centrar {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+  }
+
+}
+
+.juego {
+
+  h2 {
+    color: red;
+    font-size: 48px;
+    margin-top: 50px;
+  }
+
+  .boton-gurdo {
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin: 50px auto;
+
+    background-color: red;
+    border-color: red;
+    color: white;
+
+    &:hover {
+      background-color: red;
+      border-color: red;
+      color: white;
+    }
+  }
+}
+
+.clicker-icon {
+  font-size: 36px;
+}

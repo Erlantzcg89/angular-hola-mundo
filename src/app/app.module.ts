@@ -16,6 +16,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 import { ErlantzRestComponent } from './paginas/erlantz-rest/erlantz-rest.component';
 import { EstilosSassComponent } from './paginas/estilos-sass/estilos-sass.component';
+import { JuegoClickerComponent } from './paginas/juego-clicker/juego-clicker.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { EstilosSassComponent } from './paginas/estilos-sass/estilos-sass.compon
     PokemonRestComponent,
     ErlantzRestComponent,
     EstilosSassComponent,
+    JuegoClickerComponent,
   ],
   imports: [
     BrowserModule,
