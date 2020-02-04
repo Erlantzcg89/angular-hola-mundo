@@ -114,7 +114,7 @@ export class LoginComponent implements OnInit {
       }]
   };
 
-  pSeleccionado = "";
+  pSeleccionado: any = {};
 
   seleccionarProducto = function (producto) {
     console.log("seleccionarProducto( id: " + producto.id + ", nombre: " + producto.nombre + ")");

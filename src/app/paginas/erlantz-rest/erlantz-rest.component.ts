@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ErlantzService } from 'src/app/services/erlantz.service';
-import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'app-erlantz-rest',
@@ -10,21 +8,18 @@ import { Observable } from 'rxjs';
 })
 export class ErlantzRestComponent implements OnInit {
 
-  @Input() chat$: Observable<any>;
+  juego: any;
+  usuarios: Array<any>;
+  personajes: Array<any>;
+  criaturas: Array<any>;
+  zonas: Array<any>;
+  chat: Array<any>;
 
-  // declaraciones
-  juego: {};
-  usuarios: [];
-  personajes: [];
-  criaturas: [];
-  zonas: [];
-  chat: [];
-  contadorSegundos;
+  mensaje: string;
+  chatId: number;
 
-  // constructor
   constructor(private erlantzService: ErlantzService) {
 
-    // inicializaciones  a 0
     this.juego = {};
     this.usuarios = [];
     this.personajes = [];
@@ -32,22 +27,14 @@ export class ErlantzRestComponent implements OnInit {
     this.zonas = [];
     this.chat = [];
 
+    this.mensaje = '';
+    this.chatId = null;
+
   }
 
-  // ngOnInit
   ngOnInit() {
 
     console.trace('InicioComponent ngOnInit');
-
-    // this.contadorSegundos.subscribe((n) => {
-
-    //   console.log(`estoy suscrito al contador, n: ${n} segundos`)
-
-    // });
-
-    // this.chat$ = Observable
-    //   .interval(1000)
-    //   .startWith(0).switchMap(() => this.erlantzService.getChat());
 
     this.erlantzService.getJuego().subscribe(
       data => {

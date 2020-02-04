@@ -2,8 +2,8 @@
 
   <section class="pokemon-section">
 
-    <input type="text" [(ngModel)]="pokemonId">
-    <button (click)="buscarRellenar(pokemonId)">Buscar</button>
+    <input type="text" [(ngModel)]="pokemonNombreBuscar">
+    <button (click)="buscarRellenar(pokemonNombreBuscar)">Buscar</button>
 
     <div *ngIf="mensajeAlert" class="alert alert-danger mt-4" role="alert">
       {{mensajeAlert}}

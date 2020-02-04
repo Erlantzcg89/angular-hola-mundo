@@ -9,20 +9,21 @@ import { Pokemon } from 'src/app/model/pokemon';
 })
 export class PokemonRestComponent implements OnInit {
 
-  // declaraciones
   pokemonPrueba: any;
   pokemon: Pokemon;
   pokemons: Array<Pokemon>;
-  mensajeAlert: String;
+  mensajeAlert: string;
 
-  // constructor
+  pokemonNombreBuscar: string;
+
   constructor(private pokemonService: PokemonService) {
 
-    // inicializaciones a 0
     this.pokemonPrueba = {};
     this.pokemon = new Pokemon('');
     this.pokemons = [];
     this.mensajeAlert = '';
+
+    this.pokemonNombreBuscar = '';
 
   }
 

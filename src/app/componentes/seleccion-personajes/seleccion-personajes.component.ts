@@ -67,7 +67,7 @@ export class SeleccionPersonajesComponent implements OnInit {
       }]
   };
 
-  pjSeleccionado = "";
+  pjSeleccionado: any = {};
 
   seleccionarPersonaje = function (personaje) {
     console.log("seleccionarProducto( id: " + personaje.id + ", nombre: " + personaje.nombre + ")");
