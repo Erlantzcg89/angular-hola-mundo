@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  numeroClicks: number;
+
   constructor() {
     console.trace('InicioComponent constructor');
+
+    this.numeroClicks = 0;
   }
 
 
@@ -114,13 +118,17 @@ export class LoginComponent implements OnInit {
       }]
   };
 
-  pSeleccionado: any = {};
+  pSeleccionado: any = '';
 
   seleccionarProducto = function (producto) {
     console.log("seleccionarProducto( id: " + producto.id + ", nombre: " + producto.nombre + ")");
 
     this.pSeleccionado = producto;
 
+  }
+
+  contarClicks() {
+    this.numeroClicks++;
   }
 
   ngOnInit() {
