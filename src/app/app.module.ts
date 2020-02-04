@@ -15,6 +15,7 @@ import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 import { ErlantzRestComponent } from './paginas/erlantz-rest/erlantz-rest.component';
+import { EstilosSassComponent } from './paginas/estilos-sass/estilos-sass.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ErlantzRestComponent } from './paginas/erlantz-rest/erlantz-rest.compon
     NavbarComponent,
     PokemonRestComponent,
     ErlantzRestComponent,
+    EstilosSassComponent,
   ],
   imports: [
     BrowserModule,

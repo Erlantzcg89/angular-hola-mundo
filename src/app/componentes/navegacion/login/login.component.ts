@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +7,11 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private pokemonService: PokemonService) {
+  constructor() {
     console.trace('InicioComponent constructor');
   }
+
+
 
   productos = {
     "nombre": "productos",

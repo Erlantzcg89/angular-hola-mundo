@@ -8,11 +8,13 @@ import { TourOfHeroesComponent } from './paginas/tour-of-heroes/tour-of-heroes.c
 import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 import { ErlantzRestComponent } from './paginas/erlantz-rest/erlantz-rest.component';
+import { EstilosSassComponent } from './paginas/estilos-sass/estilos-sass.component';
 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: LoginComponent },
+  { path: 'estilos-sass', component: EstilosSassComponent },
   { path: 'arrays', component: ArraysComponent },
   { path: 'pokemon-rest', component: PokemonRestComponent },
   { path: 'erlantz-rest', component: ErlantzRestComponent },
