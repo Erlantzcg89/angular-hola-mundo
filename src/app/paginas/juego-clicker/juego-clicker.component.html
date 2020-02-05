@@ -10,13 +10,13 @@
 
   </section>
 
-  <div class="juego" [hidden]="!token">
+  <div class="juego">
 
     <section class="clicker-section">
 
 
       <h2 class="text-center">{{puntos}}</h2>
-      <button class="boton-gurdo" (click)="clickear()">CLICK</button>
+      <button class="boton-gurdo" (click)="clickear()" [disabled]="!token">CLICK</button>
 
     </section>
 
