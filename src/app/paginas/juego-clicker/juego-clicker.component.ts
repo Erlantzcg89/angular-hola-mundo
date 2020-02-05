@@ -10,13 +10,17 @@ export class JuegoClickerComponent implements OnInit {
   puntos: number;
   token: boolean;
   nombre: string;
-  registro: Map<string, number>;
+  registro: string[];
 
   constructor() {
 
     this.nombre = '';
     this.puntos = 0;
     this.token = false;
+    this.registro = [];
+    this.registro.push('Pepe: 30 puntos')
+
+    console.trace('mierda array: %o', this.registro);
 
 
   }
@@ -25,11 +29,24 @@ export class JuegoClickerComponent implements OnInit {
 
     console.trace('entrando en jugar');
 
+    console.trace('Array: %o', this.registro);
+
     if (nombre !== '' && nombre !== 'Escribe puto') {
 
       this.token = true;
 
-      setTimeout(this.timer, 1000);
+      setTimeout(() => {
+        console.trace('entrando en timer');
+
+        this.token = false;
+
+        this.registro.push(this.nombre + ': ' + this.puntos + ' puntos');
+
+        console.trace('Array despues de rellenar: %o', this.registro);
+
+        this.nombre = '';
+        this.puntos = 0;
+      }, 2000);
 
 
     } else {
@@ -38,16 +55,10 @@ export class JuegoClickerComponent implements OnInit {
 
   }// jugar
 
-  timer() {
-    console.trace('entrando en timer');
+  // timer(scope) {
 
-    this.token = false;
-    this.registro.set(this.nombre, this.puntos);
 
-    this.nombre = '';
-    this.puntos = 0;
-
-  }// timer
+  // }// timer
 
   clickear() {
     console.trace('entrando en clickear');
