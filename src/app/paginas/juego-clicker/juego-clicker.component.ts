@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+const TIEMPO_JUEGO = 5000;
+
 @Component({
   selector: 'app-juego-clicker',
   templateUrl: './juego-clicker.component.html',
@@ -38,7 +40,7 @@ export class JuegoClickerComponent implements OnInit {
         this.registro.push(this.nombre + ': ' + this.puntos + ' puntos');
         this.nombre = '';
         this.puntos = 0;
-      }, 2000); // timer
+      }, TIEMPO_JUEGO); // timer
 
     } else {
       this.nombre = 'Escribe puto';

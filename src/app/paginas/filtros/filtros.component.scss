@@ -1,0 +1,23 @@
+//azul bordes rgb(0,123,255)
+
+main {
+  padding: 50px 50px 50px;
+}
+
+section {
+  border: 5px solid rgb(0, 123, 255);
+  padding: 30px;
+  margin-bottom: 10px;
+
+  .nombre-centrar {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+  }
+
+}
+
+
+.icon {
+  font-size: 36px;
+}

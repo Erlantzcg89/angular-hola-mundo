@@ -10,11 +10,15 @@ import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.compon
 import { ErlantzRestComponent } from './paginas/erlantz-rest/erlantz-rest.component';
 import { EstilosSassComponent } from './paginas/estilos-sass/estilos-sass.component';
 import { JuegoClickerComponent } from './paginas/juego-clicker/juego-clicker.component';
+import { DirectivasComponent } from './paginas/directivas/directivas.component';
+import { FiltrosComponent } from './paginas/filtros/filtros.component';
 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: LoginComponent },
+  { path: 'directivas', component: DirectivasComponent },
+  { path: 'filtros', component: FiltrosComponent },
   { path: 'juego-clicker', component: JuegoClickerComponent },
   { path: 'estilos-sass', component: EstilosSassComponent },
   { path: 'arrays', component: ArraysComponent },

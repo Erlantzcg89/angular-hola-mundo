@@ -17,6 +17,9 @@ import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.compon
 import { ErlantzRestComponent } from './paginas/erlantz-rest/erlantz-rest.component';
 import { EstilosSassComponent } from './paginas/estilos-sass/estilos-sass.component';
 import { JuegoClickerComponent } from './paginas/juego-clicker/juego-clicker.component';
+import { DirectivasComponent } from './paginas/directivas/directivas.component';
+import { FiltrosComponent } from './paginas/filtros/filtros.component';
+import { HelloDirective } from './directives/hello.directive';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { JuegoClickerComponent } from './paginas/juego-clicker/juego-clicker.com
     ErlantzRestComponent,
     EstilosSassComponent,
     JuegoClickerComponent,
+    DirectivasComponent,
+    FiltrosComponent,
+    HelloDirective,
   ],
   imports: [
     BrowserModule,
