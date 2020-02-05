@@ -14,11 +14,22 @@
       <dd>Cambian la apariencia de un elemento del DOM.</dd>
     </dl>
 
-    <p>Creamos nuestras propias directivas con ng g d</p>
+    <p appHello color="yellow">Creamos nuestras propias directivas con ng g d</p>
 
   </section>
 
+  <section>
+    <ul>
+      <li><input type="radio" (click)="colorSeleccionado='pink'" name="colorSeleccionado"> Rosa</li>
+      <li><input type="radio" (click)="colorSeleccionado='orange'" name="colorSeleccionado"> Naranja</li>
+      <li><input type="radio" (click)="colorSeleccionado='peru'" name="colorSeleccionado"> Peru</li>
+    </ul>
+    <p appSubrayar="red">Párrafo subrayar rojo</p>
+    <p [appSubrayar]="'pink'">Párrafo subrayar rosa</p>
+    <p [appSubrayar]="colorSeleccionado">Color seleccionado</p>
+    <p>Elige color personalizado: <input type="color" [(ngModel)]="colorSeleccionado"></p>
 
 
+  </section>
 
 </main>

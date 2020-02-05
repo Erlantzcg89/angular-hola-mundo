@@ -1,7 +1,46 @@
-<main class="main">
+<main>
 
-  <section class="section">
+  <section>
+    <h2>Built-in Pipes</h2>
+    <a target="_blank" href="https://angular.io/api?type=pipe">Ir a la Api</a>
+  </section>
 
+  <section>
+    <h2>Custom Filter</h2>
+    <a target="_blank" href="https://angular.io/guide/pipes">Documentación Oficial Pipes</a>
+  </section>
+
+  <section>
+    <h6>pipe | json</h6>
+    <pre>{{coche | json}}</pre>
+    <h6>pipe | uppercase</h6>
+    <pre>{{coche.nombre | uppercase}}</pre>
+    <h6>pipe | currency</h6>
+    <pre>{{coche.precio | currency: 'EUR': ''}} &euro;</pre>
+    <h6>pipe | slice</h6>
+    <pre>{{coche.nombre | slice: 5}}</pre>
+  </section>
+
+  <section>
+    <div class="mb-2">
+      Nombre: <input type="search" [(ngModel)]="busqueda" placeholder="buscar por nombre">
+    </div>
+    <div class="mb-2">
+      Tipo: <select name="" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option *ngFor="let t of tipos">{{t}}</option>
+      </select>
+    </div>
+    <ul class="list-group">
+      <li *ngFor="let a of animales | animalesFiltro : busqueda " class="list-group-item">
+        Nombre: {{a.Nombre}}<br>
+        <img src="{{a.Imagen}}" alt="{{a.Nombre}}"><br>
+        Observacion: {{a.Observacion}}<br>
+        Ubicacion: {{a.Ubicacion}}<br>
+        Rasgos: {{a.Rasgos}}<br>
+      </li>
+    </ul>
   </section>
 
 
