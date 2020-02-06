@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <nav class="app-navbar navbar navbar-expand-lg">
 
-  <h1 class="m-auto text-white">{{tituloNav}}</h1>
+  <h1 class="m-auto text-white">Hola Mundo</h1>
 
 </nav>
 
@@ -9,6 +9,7 @@
 
 <nav class="app-navbar navbar navbar-expand-lg">
 
-  <p class="m-auto text-white" [innerHTML]="tituloFooter"></p>
+  <p class="m-auto text-center text-white">&copy; {{global.usuario}}<br>
+    <a target="_blank" href="{{global.github}}">Github: <i class="fab fa-github"></i></a></p>
 
 </nav>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GLOBAL } from './model/global';
 
 /**
  * app-component: componente principal que se carga al arrancar la app
@@ -16,7 +17,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  tituloNav = 'Hola Mundo';
-  tituloFooter = '&copy; Erlantz Caballero 2020';
 
-}
+  global: any;
+
+  constructor() {
+    console.log('AppComponent constructor');
+
+    this.global = GLOBAL;
+  }// constructor
+
+}// AppComponent

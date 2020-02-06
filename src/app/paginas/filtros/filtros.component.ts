@@ -10,6 +10,8 @@ export class FiltrosComponent implements OnInit {
 
   coche: any;
   animales: Array<any>;
+  tipos: Array<string>;
+  tipo: string;
   busqueda: string;
 
   constructor() {
@@ -18,6 +20,8 @@ export class FiltrosComponent implements OnInit {
     this.busqueda = '';
 
     this.animales = ANIMALES;
+    this.tipo = 'TODOS';
+    this.tipos = [...new Set(this.animales.map((el) => el.Tipo))];
 
     this.coche = {
       "nombre": "Audi r8",

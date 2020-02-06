@@ -1,16 +1,8 @@
 <main>
 
   <section>
-    <h2>Built-in Pipes</h2>
-    <a target="_blank" href="https://angular.io/api?type=pipe">Ir a la Api</a>
-  </section>
-
-  <section>
-    <h2>Custom Filter</h2>
-    <a target="_blank" href="https://angular.io/guide/pipes">Documentación Oficial Pipes</a>
-  </section>
-
-  <section>
+    <h2 class="text-center">Built-in Pipes</h2>
+    <a class="d-block text-center" target="_blank" href="https://angular.io/api?type=pipe">Ir a la Api</a>
     <h6>pipe | json</h6>
     <pre>{{coche | json}}</pre>
     <h6>pipe | uppercase</h6>
@@ -22,18 +14,19 @@
   </section>
 
   <section>
+    <h2 class="text-center">Custom Filter</h2>
+    <a class="d-block text-center" target="_blank" href="https://angular.io/guide/pipes">Documentación Oficial Pipes</a>
     <div class="mb-2">
       Nombre: <input type="search" [(ngModel)]="busqueda" placeholder="buscar por nombre">
     </div>
     <div class="mb-2">
-      Tipo: <select name="" id="">
-        <option value="">1</option>
-        <option value="">2</option>
+      Tipo: <select [(ngModel)]="tipo">
+        <option selected>TODOS</option>
         <option *ngFor="let t of tipos">{{t}}</option>
       </select>
     </div>
     <ul class="list-group">
-      <li *ngFor="let a of animales | animalesFiltro : busqueda " class="list-group-item">
+      <li *ngFor="let a of animales | animalesFiltro : busqueda : tipo" class="list-group-item">
         Nombre: {{a.Nombre}}<br>
         <img src="{{a.Imagen}}" alt="{{a.Nombre}}"><br>
         Observacion: {{a.Observacion}}<br>
@@ -42,8 +35,5 @@
       </li>
     </ul>
   </section>
-
-
-
 
 </main>
