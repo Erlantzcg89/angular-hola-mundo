@@ -12,11 +12,13 @@ import { EstilosSassComponent } from './paginas/estilos-sass/estilos-sass.compon
 import { JuegoClickerComponent } from './paginas/juego-clicker/juego-clicker.component';
 import { DirectivasComponent } from './paginas/directivas/directivas.component';
 import { FiltrosComponent } from './paginas/filtros/filtros.component';
+import { TareasComponent } from './paginas/tareas/tareas.component';
 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: LoginComponent },
+  { path: 'tareas', component: TareasComponent },
   { path: 'directivas', component: DirectivasComponent },
   { path: 'filtros', component: FiltrosComponent },
   { path: 'juego-clicker', component: JuegoClickerComponent },

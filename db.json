@@ -1,24 +1,40 @@
 {
-  "juego": {
-    "combates": [
-      {
-        "id": 1,
-        "id_zona": 1,
-        "id_personajes": [
-          1,
-          2
-        ],
-        "criaturas": [
-          {
-            "id": 1,
-            "cantidad": 1
-          }
-        ]
-      }
-    ]
-  },
-  "usuarios": [
+  "tareas": [{
+      "id": 1,
+      "titulo": "Crear datos en Json",
+      "completada": true
+    },
     {
+      "id": 2,
+      "titulo": "Crear Modelo con interfaz",
+      "completada": false
+    },
+    {
+      "id": 3,
+      "titulo": "Tomar Cafe y descanso a las 10:30",
+      "completada": false
+    },
+    {
+      "id": 4,
+      "titulo": "Crear Provider",
+      "completada": false
+    }
+  ],
+  "juego": {
+    "combates": [{
+      "id": 1,
+      "id_zona": 1,
+      "id_personajes": [
+        1,
+        2
+      ],
+      "criaturas": [{
+        "id": 1,
+        "cantidad": 1
+      }]
+    }]
+  },
+  "usuarios": [{
       "id": 1,
       "nombre": "Erlantz",
       "id_personaje": 2
@@ -29,8 +45,7 @@
       "id_personaje": 1
     }
   ],
-  "personajes": [
-    {
+  "personajes": [{
       "id": 1,
       "nombre": "elfo",
       "vida": 9,
@@ -47,24 +62,19 @@
       "danyo_bonus": 0
     }
   ],
-  "criaturas": [
-    {
-      "id": 1,
-      "nombre": "trasgo",
-      "vida": 4,
-      "ataque_dado": 4,
-      "ataque_dado_n": 1,
-      "danyo_bonus": 0
-    }
-  ],
-  "zonas": [
-    {
-      "id": 1,
-      "nombre": "bosque viejo"
-    }
-  ],
-  "chat": [
-    {
+  "criaturas": [{
+    "id": 1,
+    "nombre": "trasgo",
+    "vida": 4,
+    "ataque_dado": 4,
+    "ataque_dado_n": 1,
+    "danyo_bonus": 0
+  }],
+  "zonas": [{
+    "id": 1,
+    "nombre": "bosque viejo"
+  }],
+  "chat": [{
       "id": 1,
       "id_usuario": 1,
       "fecha": "28/01/2020",

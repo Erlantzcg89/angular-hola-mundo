@@ -1,5 +1,10 @@
 export const RUTAS = [
     {
+        "ruta": "/tareas",
+        "nombre": "Tareas",
+        "icono": ""
+    },
+    {
         "ruta": "/directivas",
         "nombre": "Directivas",
         "icono": ""
