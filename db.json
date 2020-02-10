@@ -1,40 +1,51 @@
 {
-  "tareas": [{
+  "tareas": [
+    {
       "id": 1,
-      "titulo": "Crear datos en Json",
+      "titulo": "Entenderlo, depurar y consola",
       "completada": true
     },
     {
       "id": 2,
-      "titulo": "Crear Modelo con interfaz",
-      "completada": false
+      "titulo": "mejorar UI, mostrando mensajes",
+      "completada": true
     },
     {
       "id": 3,
-      "titulo": "Tomar Cafe y descanso a las 10:30",
-      "completada": false
+      "titulo": "Mostrar en los mensajes informacion de las tareas eliminadas etc",
+      "completada": true
     },
     {
       "id": 4,
-      "titulo": "Crear Provider",
-      "completada": false
+      "titulo": "mejorar diseño",
+      "completada": true
+    },
+    {
+      "id": 5,
+      "titulo": "con fontawesome, imagen de fondo, caja semitransparente en medio",
+      "completada": true
     }
   ],
   "juego": {
-    "combates": [{
-      "id": 1,
-      "id_zona": 1,
-      "id_personajes": [
-        1,
-        2
-      ],
-      "criaturas": [{
+    "combates": [
+      {
         "id": 1,
-        "cantidad": 1
-      }]
-    }]
+        "id_zona": 1,
+        "id_personajes": [
+          1,
+          2
+        ],
+        "criaturas": [
+          {
+            "id": 1,
+            "cantidad": 1
+          }
+        ]
+      }
+    ]
   },
-  "usuarios": [{
+  "usuarios": [
+    {
       "id": 1,
       "nombre": "Erlantz",
       "id_personaje": 2
@@ -45,7 +56,8 @@
       "id_personaje": 1
     }
   ],
-  "personajes": [{
+  "personajes": [
+    {
       "id": 1,
       "nombre": "elfo",
       "vida": 9,
@@ -62,19 +74,24 @@
       "danyo_bonus": 0
     }
   ],
-  "criaturas": [{
-    "id": 1,
-    "nombre": "trasgo",
-    "vida": 4,
-    "ataque_dado": 4,
-    "ataque_dado_n": 1,
-    "danyo_bonus": 0
-  }],
-  "zonas": [{
-    "id": 1,
-    "nombre": "bosque viejo"
-  }],
-  "chat": [{
+  "criaturas": [
+    {
+      "id": 1,
+      "nombre": "trasgo",
+      "vida": 4,
+      "ataque_dado": 4,
+      "ataque_dado_n": 1,
+      "danyo_bonus": 0
+    }
+  ],
+  "zonas": [
+    {
+      "id": 1,
+      "nombre": "bosque viejo"
+    }
+  ],
+  "chat": [
+    {
       "id": 1,
       "id_usuario": 1,
       "fecha": "28/01/2020",

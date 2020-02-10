@@ -1,3 +1,24 @@
+.contenedor {
+  background-image: url(../../../assets/img/coffe-tasks.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  padding: 30px;
+}
+
+main {
+
+  background-color: rgb(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+}
+
 .completada {
   text-decoration: line-through;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }

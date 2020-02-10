@@ -29,14 +29,12 @@ export class TareasService implements ITareasService {
 
   public crear(tarea: Tarea): Observable<Tarea> {
     const url = `http://localhost:3000/tareas/`;
-    const toAdd = '';
-    return this.http.post<Tarea>(url, toAdd);
+    return this.http.post<Tarea>(url, tarea);
   }
 
   public modificar(tarea: Tarea): Observable<Tarea> {
     const url = `http://localhost:3000/tareas/${tarea.id}`;
-    const toUpdate = '';
-    return this.http.put<Tarea>(url, toUpdate);
+    return this.http.put<Tarea>(url, tarea);
   }
 
   public borrar(id: number): Observable<Tarea> {
