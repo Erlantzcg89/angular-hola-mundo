@@ -3,27 +3,27 @@
     {
       "id": 1,
       "titulo": "Entenderlo, depurar y consola",
-      "completada": true
+      "completada": false
     },
     {
       "id": 2,
       "titulo": "mejorar UI, mostrando mensajes",
-      "completada": true
+      "completada": false
     },
     {
       "id": 3,
       "titulo": "Mostrar en los mensajes informacion de las tareas eliminadas etc",
-      "completada": true
+      "completada": false
     },
     {
       "id": 4,
       "titulo": "mejorar diseño",
-      "completada": true
+      "completada": false
     },
     {
       "id": 5,
       "titulo": "con fontawesome, imagen de fondo, caja semitransparente en medio",
-      "completada": true
+      "completada": false
     }
   ],
   "juego": {

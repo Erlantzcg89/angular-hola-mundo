@@ -1,9 +1,9 @@
 .contenedor {
   background-image: url(../../../assets/img/coffe-tasks.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 100%;
 
-  padding: 30px;
+  padding: 60px;
 }
 
 main {
@@ -18,7 +18,18 @@ main {
   text-decoration: line-through;
 }
 
+.nueva-tarea {
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+hr {
+  height: 6px;
+
 }

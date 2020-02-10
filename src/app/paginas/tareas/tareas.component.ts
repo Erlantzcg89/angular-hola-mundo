@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tarea } from 'src/app/model/tarea';
 import { TareasService } from 'src/app/services/tareas.service';
-import { typeWithParameters } from '@angular/compiler/src/render3/util';
 import { Alerta } from 'src/app/model/alerta';
 
 @Component({
@@ -14,6 +13,7 @@ export class TareasComponent implements OnInit {
   tareas: Array<Tarea>;
   tituloTarea: string;
   alerta: Alerta;
+  habilitado: boolean;
 
   constructor(private tareasService: TareasService) {
 
@@ -21,6 +21,7 @@ export class TareasComponent implements OnInit {
     this.tareas = [];
     this.tituloTarea = '';
     this.alerta = undefined;
+    this.habilitado = false;
 
   }// constructor
 
@@ -46,7 +47,7 @@ export class TareasComponent implements OnInit {
       error => console.warn(error)
     )
 
-  }
+  }// onGet
 
   onUpdate(tarea: Tarea) {
     console.trace('onUpdate tarea: %o', tarea);
@@ -62,7 +63,7 @@ export class TareasComponent implements OnInit {
       error => console.warn(error)
     );
 
-  }
+  }// onUpdate
 
   onBorrar(t: Tarea) {
     console.trace('onBorrar id: %o', t.id);
@@ -80,7 +81,7 @@ export class TareasComponent implements OnInit {
       error => console.warn(error)
     );
 
-  }
+  }// onBorrar
 
   onCrear(titulo: string) {
     console.trace('onUpdate tarea: %s', titulo);
@@ -112,6 +113,12 @@ export class TareasComponent implements OnInit {
 
     }
 
-  }
+  }// onCrear
+
+  onHabilitar() {
+
+    this.habilitado = !this.habilitado;
+
+  }// onHabilitar
 
 }// TareasCoponent
