@@ -34,13 +34,13 @@ export class TareasService implements ITareasService {
   }
 
   public modificar(tarea: Tarea): Observable<Tarea> {
-    const url = `http://localhost:3000/tareas/{{tarea.id}}`;
+    const url = `http://localhost:3000/tareas/${tarea.id}`;
     const toUpdate = '';
     return this.http.put<Tarea>(url, toUpdate);
   }
 
   public borrar(id: number): Observable<Tarea> {
-    const url = `http://localhost:3000/tareas/{{id}}`;
+    const url = `http://localhost:3000/tareas/${id}`;
     return this.http.delete<Tarea>(url);
   }
 }
