@@ -2,15 +2,29 @@
   "tareas": [
     {
       "id": 1,
-      "titulo": "unosunosunosunos",
-      "completada": true,
-      "otro": "unosunosunosunos"
+      "titulo": "pasar a producción",
+      "completada": false,
+      "otro": "pasar a producción"
+    },
+    {
+      "id": 2,
+      "titulo": "mirar guard",
+      "completada": false
+    },
+    {
+      "id": 3,
+      "titulo": "mirar loginService",
+      "completada": false
     },
     {
       "id": 4,
-      "titulo": "trestrestrestres",
-      "completada": true,
-      "otro": "trestrestrestres"
+      "titulo": "mirar ReactiveForms",
+      "completada": false
+    },
+    {
+      "id": 5,
+      "titulo": "github landing page",
+      "completada": false
     }
   ],
   "juego": {

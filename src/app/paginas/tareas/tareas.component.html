@@ -2,11 +2,7 @@
 
   <main>
 
-    <h2 class="">Tareas</h2>
-
     <section>
-
-      <p>Ejemplo de Provider o Servicio para hacer un CRUD completo, contra un servicio REST</p>
 
       <div *ngIf="alerta" class="alert alert-{{alerta.tipo}} alert-dismissible" role="alert">
         {{alerta.cuerpo}}
@@ -16,29 +12,30 @@
 
         <div class="form-inline">
 
-          <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Introducir tarea" [(ngModel)]="tituloTarea">
+          <input spellcheck="false" type="text" class="form-control mb-2 mr-sm-2" placeholder="Introducir tarea"
+            [(ngModel)]="tituloTarea">
           <button class="btn btn-primary mb-2" (click)="onCrear(tituloTarea)">Crear</button>
 
         </div>
 
       </div><!-- .nueva-tarea -->
 
-      <hr>
-
+      <!-- <hr> -->
+      <h5 class="">Tareas:</h5>
       <ul>
 
         <li *ngFor="let t of tareas">
 
           <div class="row form-inline">
 
-            <div class="tarea-check col-1">
+            <div class="tarea-check col-2">
 
               <i (click)="onCheck(t)" [hidden]="t.completada" class="far fa-square"></i>
               <i (click)="onCheck(t)" [hidden]="!t.completada" class="far fa-check-square"></i>
 
             </div>
 
-            <div class="tarea col-9">
+            <div class="tarea col-8">
 
               <span spellcheck="false" class="{{(t.completada) ? 'completada' : ''}} tarea-titulo mb-2 mr-sm-2"
                 contenteditable="true" [textContent]="t.titulo" (input)="t.otro=$event.target.textContent"

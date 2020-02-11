@@ -80,11 +80,12 @@ export class TareasComponent implements OnInit {
       data => {
         console.debug('borrar tarea ok %o', data);
 
-        this.alerta = new Alerta();
-        this.alerta.tipo = 'danger';
-        this.alerta.cuerpo = 'Tarea: id ' + t.id + ' "' + t.titulo + '" borrada con éxito';
-
         this.onGet();
+
+        // this.alerta = new Alerta();
+        // this.alerta.tipo = 'success';
+        // this.alerta.cuerpo = 'Tarea: "' + t.titulo + '" borrada con éxito';
+
       },
       error => console.warn(error)
     );
@@ -105,11 +106,12 @@ export class TareasComponent implements OnInit {
 
           this.tituloTarea = '';
 
-          this.alerta = new Alerta();
-          this.alerta.tipo = 'success';
-          this.alerta.cuerpo = 'Tarea: "' + t.titulo + '" creada con éxito';
-
           this.onGet();
+
+          // this.alerta = new Alerta();
+          // this.alerta.tipo = 'success';
+          // this.alerta.cuerpo = 'Tarea: "' + t.titulo + '" creada con éxito';
+
         },
         error => {
           console.warn(error);
@@ -124,7 +126,7 @@ export class TareasComponent implements OnInit {
 
       this.alerta = new Alerta();
       this.alerta.tipo = 'warning';
-      this.alerta.cuerpo = 'Aviso: Escribe un titulo para la tarea';
+      this.alerta.cuerpo = 'Tarea vacía';
 
     }
 
@@ -133,7 +135,7 @@ export class TareasComponent implements OnInit {
   onModificar(titulo: string, t: Tarea) {
     console.trace('onModificar tarea: %s %o', titulo, t);
 
-    if (titulo !== t.titulo) {
+    if (titulo !== t.titulo && titulo) {
 
       if (titulo.trim() !== '') {
 
@@ -145,9 +147,9 @@ export class TareasComponent implements OnInit {
 
             this.onGet();
 
-            this.alerta = new Alerta();
-            this.alerta.tipo = 'success';
-            this.alerta.cuerpo = 'Tarea: "' + t.titulo + '" modificada con éxito';
+            // this.alerta = new Alerta();
+            // this.alerta.tipo = 'success';
+            // this.alerta.cuerpo = 'Tarea: "' + t.titulo + '" modificada con éxito';
 
             console.log('alerta: %o', this.alerta);
           },
