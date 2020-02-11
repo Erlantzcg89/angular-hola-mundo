@@ -23,6 +23,7 @@ import { HelloDirective } from './directives/hello.directive';
 import { SubrayarDirective } from './directives/subrayar.directive';
 import { AnimalesPipe } from './pipes/animales.pipe';
 import { TareasComponent } from './paginas/tareas/tareas.component';
+import { InicioSesionComponent } from './paginas/inicio-sesion/inicio-sesion.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TareasComponent } from './paginas/tareas/tareas.component';
     HelloDirective,
     SubrayarDirective,
     AnimalesPipe,
-    TareasComponent
+    TareasComponent,
+    InicioSesionComponent
   ],
   imports: [
     BrowserModule,

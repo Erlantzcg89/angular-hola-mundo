@@ -22,14 +22,48 @@ main {
   max-width: 300px;
   margin: auto;
   margin-bottom: 20px;
+
+  input[type=text] {
+    border: 1px solid rgb(128, 128, 128, 0.6);
+  }
 }
 
 ul {
   list-style-type: none;
   padding-left: 0;
+
 }
 
 hr {
   height: 6px;
+
+}
+
+.tarea {
+  padding-left: 0;
+
+  span {
+    display: inline-block;
+    background-color: white;
+    padding: 5px 8px;
+    border: 1px solid rgb(128, 128, 128, 0.6);
+    border-radius: 5px;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+.tarea-boton {
+  button {
+    border: 1px solid rgb(128, 128, 128, 0.6) !important;
+  }
+}
+
+.tarea-check {
+
+  padding-right: 0;
+
 
 }

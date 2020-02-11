@@ -2,28 +2,15 @@
   "tareas": [
     {
       "id": 1,
-      "titulo": "Entenderlo, depurar y consola",
-      "completada": false
-    },
-    {
-      "id": 2,
-      "titulo": "mejorar UI, mostrando mensajes",
-      "completada": false
-    },
-    {
-      "id": 3,
-      "titulo": "Mostrar en los mensajes informacion de las tareas eliminadas etc",
-      "completada": false
+      "titulo": "unosunosunosunos",
+      "completada": true,
+      "otro": "unosunosunosunos"
     },
     {
       "id": 4,
-      "titulo": "mejorar diseño",
-      "completada": false
-    },
-    {
-      "id": 5,
-      "titulo": "con fontawesome, imagen de fondo, caja semitransparente en medio",
-      "completada": false
+      "titulo": "trestrestrestres",
+      "completada": true,
+      "otro": "trestrestrestres"
     }
   ],
   "juego": {

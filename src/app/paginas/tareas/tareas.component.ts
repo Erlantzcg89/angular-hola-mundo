@@ -43,27 +43,35 @@ export class TareasComponent implements OnInit {
       datos => {
         console.debug('get tareas ok %o', datos);
         this.tareas = datos;
+
       },
-      error => console.warn(error)
+      error => {
+        console.warn(error);
+
+        this.alerta = new Alerta();
+        this.alerta.tipo = 'danger';
+        this.alerta.cuerpo = 'Aplicación fuera de servicio';
+      }
     )
 
   }// onGet
 
-  onUpdate(tarea: Tarea) {
-    console.trace('onUpdate tarea: %o', tarea);
+  onCheck(tarea: Tarea) {
+    console.trace('onCheck tarea: %o', tarea);
 
     tarea.completada = !tarea.completada
 
     this.tareasService.modificar(tarea).subscribe(
       data => {
-        console.debug('put tarea ok %o', data);
+        console.debug('modificar tarea ok %o', data);
+
         this.onGet();
 
       },
       error => console.warn(error)
     );
 
-  }// onUpdate
+  }// onCheck
 
   onBorrar(t: Tarea) {
     console.trace('onBorrar id: %o', t.id);
@@ -72,11 +80,11 @@ export class TareasComponent implements OnInit {
       data => {
         console.debug('borrar tarea ok %o', data);
 
-        this.onGet();
-
         this.alerta = new Alerta();
         this.alerta.tipo = 'danger';
         this.alerta.cuerpo = 'Tarea: id ' + t.id + ' "' + t.titulo + '" borrada con éxito';
+
+        this.onGet();
       },
       error => console.warn(error)
     );
@@ -86,7 +94,7 @@ export class TareasComponent implements OnInit {
   onCrear(titulo: string) {
     console.trace('onUpdate tarea: %s', titulo);
 
-    if (this.tituloTarea !== '') {
+    if (this.tituloTarea.trim() !== '') {
 
       let t = new Tarea();
       t.titulo = titulo;
@@ -96,13 +104,20 @@ export class TareasComponent implements OnInit {
           console.debug('crear tarea ok %o', data);
 
           this.tituloTarea = '';
-          this.onGet();
 
           this.alerta = new Alerta();
           this.alerta.tipo = 'success';
           this.alerta.cuerpo = 'Tarea: "' + t.titulo + '" creada con éxito';
+
+          this.onGet();
         },
-        error => console.warn(error)
+        error => {
+          console.warn(error);
+
+          this.alerta = new Alerta();
+          this.alerta.tipo = 'danger';
+          this.alerta.cuerpo = 'Aplicación fuera de servicio';
+        }
       );
 
     } else {
@@ -115,10 +130,48 @@ export class TareasComponent implements OnInit {
 
   }// onCrear
 
-  onHabilitar() {
+  onModificar(titulo: string, t: Tarea) {
+    console.trace('onModificar tarea: %s %o', titulo, t);
 
-    this.habilitado = !this.habilitado;
+    if (titulo !== t.titulo) {
 
-  }// onHabilitar
+      if (titulo.trim() !== '') {
+
+        t.titulo = titulo;
+
+        this.tareasService.modificar(t).subscribe(
+          data => {
+            console.debug('crear modificada ok %o', data);
+
+            this.onGet();
+
+            this.alerta = new Alerta();
+            this.alerta.tipo = 'success';
+            this.alerta.cuerpo = 'Tarea: "' + t.titulo + '" modificada con éxito';
+
+            console.log('alerta: %o', this.alerta);
+          },
+          error => {
+            console.warn(error);
+
+            this.alerta = new Alerta();
+            this.alerta.tipo = 'danger';
+            this.alerta.cuerpo = 'Aplicación fuera de servicio';
+          }// servicio no disponible
+        );
+
+      } else {
+
+        this.alerta = new Alerta();
+        this.alerta.tipo = 'warning';
+        this.alerta.cuerpo = 'Aviso: Escribe un titulo para la tarea';
+
+      }// titulo ha cambiado pero es incorrecto
+
+    }// si el titulo ha cambiado
+
+
+
+  }// onModificar
 
 }// TareasCoponent
